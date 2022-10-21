@@ -1,6 +1,6 @@
 :source-highlighter: highlight.js
 :highlightjs-theme: rainbow
 :highlightjs-languages: yaml, scilab, javascript,rainbow, plantuml, html, php, css
-:formateur: yes
+:formateur: yes 
 
 
