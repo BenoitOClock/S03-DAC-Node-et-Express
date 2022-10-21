@@ -1,0 +1,106 @@
+= JavaScrit
+include::./../adoc_fragments/fragment_header.adoc[]
+
+Module 07 - Dataset
+
+ifeval::["{formateur}" ==  "yes"]
+[NOTE.speaker]
+.Discours formateur
+****
+Bienvenue dans ce module traitant des dataSet.
+****
+endif::[]
+
+== Objectifs
+
+* Savoir ce qu'est Dataset
+* Comprendre l'utilité de Dataset
+* Connaître la syntaxe HTML de Dataset
+* Savoir lire et écrite des dataset en JavaScript
+
+== Dataset c'est quoi ?
+
+Les datasets (attributs de données) sont des attributs particuliers :
+
+* Ils servent à stocker des informations utiles pour une applications.
+* Ils n'ont pas de sens sémantique.
+* Leur nommage est normalisé :
+    ** Préfixés par data- suivi d'un nom d'attribut en kebab-case (exemple : data-category-id)
+
+== Comprendre l'utilité de Dataset
+
+Les données sont stockées dans la page HTML, donc toujours disponibles et permet de ne pas soliciter la base de données.
+
+== Dataset : Syntaxe HTML
+
+[source,html]
+----
+<article id="pain-au-chocolat-ou-chocolatine" data-post-id="548" data-category="Débat de société">
+   Lorem ipsum...
+</article>
+----
+
+[background-color="#F4D03F"]
+== Démonstration
+Dataset : Syntaxe HTML
+
+== Dataset : Ecriture en JavaScript
+
+* Syntaxe Javascript, pour accéder à un attribut dataset :
+    ** On utilise la propriété .dataset
+    ** Suivie du nom de l'attribut sans le préfixe data
+    ** Puis on fournit le nom de l'attribut en camelCase
+
+[source,javascript]
+----
+// ---------------------------------------------
+// Ajout/modification d'un dataset
+// ---------------------------------------------
+article.dataset.category = 'Synonymes';
+----
+
+[background-color="#F4D03F"]
+== Démonstration
+Dataset : Ecriture en JavaScript
+
+== Dataset : Lecture en JavaScript
+
+* Syntaxe Javascript, pour accéder à un attribut dataset :
+    ** On utilise la propriété .dataset
+    ** Suivie du nom de l'attribut sans le préfixe data
+    ** Puis on fournit le nom de l'attribut en camelCase
+
+[source,javascript]
+----
+const article = document.getElementById('pain-au-chocolat-ou-chocolatine');
+
+// ---------------------------------------------
+// Lecture d'un dataset
+// ---------------------------------------------
+// Pour accéder à la valeur de l'attribut data-post-id,
+// on utilise .dataset.postId
+const postId = article.dataset.postId;
+----
+
+[background-color="#F4D03F"]
+== Démonstration
+Dataset : Lecture en JavaScript
+
+[background-color="#F4D03F"]
+== Démonstration
+Sur Trip'Odvisor : Filtres sur les commentaires
+
+== Conclusion
+* Vous savez ce qu'est Dataset
+* Vous comprenez l'utilité de Dataset
+* Vous connaîssez la syntaxe HTML de Dataset
+* Vous savez lire et écrire des dataset en JavaScript
+
+== Objectif / Niveau
+* *Essentiel* : Comprendre l'intérêt des dataSet.
+* *Attendu* : Savoir utiliser les dataSet.
+* *Avancé* : Savoir utiliser et quand utiliser des dataSet.
+
+[background-color="#5DADE2"]
+== A toi de jouer
+Challenge

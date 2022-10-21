@@ -1,0 +1,394 @@
+= JavaScrit
+include::./../adoc_fragments/fragment_header.adoc[]
+
+Module 01 - Les fondamentaux
+
+ifeval::["{formateur}" ==  "yes"]
+[NOTE.speaker]
+.Discours formateur
+****
+Bienvenue dans ce module traitant des fondamentaux du JavaScript
+****
+endif::[]
+
+== Objectifs
+
+[%step]
+ * Connaître l'utilité du langage JavaScript
+ * Connaître les fondamentaux du langage JavaScript
+
+== Un langage pour les navigateurs
+
+Les navigateurs savent interpréter trois langages :
+
+ * Le *HTML* : permet de structurer le contenu
+ * Le *CSS* : permet de mettre en forme le contenu
+ * Le *JavaScript* : permet de rendre le contenu *interactif*
+
+[NOTE.speaker]
+--
+Le PHP est interprété sur le serveur web, les navigateurs sont incapables d'interpréter le PHP.
+--
+
+== PlantUML C'est quoi ?
+
+[plantuml, target=diagram-classes, format=txt]   
+....
+class BlockProcessor
+class DiagramBlock
+class DitaaBlock
+class PlantUmlBlock
+
+BlockProcessor <|-- DiagramBlock
+DiagramBlock <|-- DitaaBlock
+DiagramBlock <|-- PlantUmlBlock
+....
+
+== A quoi sert un contenu interactif ?
+
+* A faire les slides que vous lisez
+* A récupérer le flux webcam où vous souriez
+* A envoyer & recevoir les messages du chat que vous écrivez
+* A faire tout le cockpit dans lequel vous êtes installés !
+
+== Et quoi d'autre encore ?
+
+[.text-xs9r]
+* Faire une action sans recharger la page
+    ** supprimer un produit du panier
+* Valider le contenu d'un formulaire
+    ** afficher erreur ou succès au moment où l'on écrit
+* Animer les éléments de la page
+    ** faire un carousel d'images
+
+
+Bref, JavaScript dynamise les pages web !
+
+== Le langage JavaScript
+
+* JavaScript est un langage qui peut être employé en tant que langage procédural ou orienté objet.
+
+ifeval::["{formateur}" ==  "yes"]
+[NOTE.speaker]
+.Discours formateur
+****
+Indiquer que nous verrons le paradigme du développement Orienté Objet en S04.
+Le procédural c'est comme une recette de cuisine, on fait les actions les unes après les autres comme c'est écrit dans la recette.
+****
+endif::[]
+
+== Les variables
+
+Une variable permet de stocker une valeur.
+
+ifeval::["{formateur}" ==  "yes"]
+[NOTE.speaker]
+.Discours formateur
+****
+Exactement comme en PHP vu en S02.
+****
+endif::[]
+
+== Syntaxe
+
+[source,javascript]
+----
+let unEntier = 10;  //number
+let uneString = "I'm happy d'être avec vous today"; //string
+let unBoulean = true; // false
+let uneVariable; //undefined
+let unTrucNull = null; //Null
+----
+
+[NOTE.speaker]
+--
+Deux caractèristiques du langage JavaScript :
+
+* Typage dynamique = c'est la valeur d'affectation qui définit le type de la variable.
+* Non fortement typé = Une variable peut changée de type lors de l'execution du programme.
+--
+
+[transition=fade, %notitle]
+[background-color="#F4D03F"]
+== Démonstration
+Les variables
+
+ifeval::["{formateur}" ==  "yes"]
+[NOTE.speaker]
+.Discours formateur
+****
+Faire la démonstration en live.
+****
+endif::[]
+
+== Les tableaux
+
+Un tableau permet de stocker un ensemble de valeurs.
+
+ifeval::["{formateur}" ==  "yes"]
+[NOTE.speaker]
+.Discours formateur
+****
+Comme en PHP vu lors de la saison 02.
+****
+endif::[]
+
+== Syntaxe
+
+[source,javascript]
+----
+let tableau = ['Oclock','Rennes',14540,'Truc','Muche']
+tableau[6] = 'Wololo'
+console.log(tableau[0])
+----
+
+[background-color="#F4D03F"]
+== Démonstration
+Les tableaux
+
+ifeval::["{formateur}" ==  "yes"]
+[NOTE.speaker]
+.Discours formateur
+****
+Faire la démonstration en live.
+****
+endif::[]
+
+== Les opérateurs de comparaison
+
+* Comme en PHP
+
+== Syntaxe
+
+[.text-xs]
+[cols="1,1"]
+|===
+|Opérateur |Description
+
+|Egalité (==)
+|Renvoie true si les opérandes sont égaux.
+
+|Inégalité (!=)
+|Renvoie true si les opérandes sont différents.
+
+|Égalité stricte (===)
+|Renvoie true si les opérandes sont égaux et du même type. 
+
+|Inégalité stricte (!==)
+|Renvoie true si les opérandes sont du même type et différents ou s'ils ne sont pas du même type.
+
+|Supériorité stricte (>)
+|Renvoie true si l'opérande gauche est strictement supérieur à l'opérande droit.
+
+|Supériorité (>=)
+|Renvoie true si l'opérande gauche est supérieur ou égal à l'opérande droit.
+
+|Infériorité stricte (<)
+|Renvoie true si l'opérande gauche est strictement inférieur à l'opérande droit.
+
+|Infériorité (<=)
+|Renvoie true si l'opérande gauche est inférieur ou égal à l'opérande droit.
+|===
+
+[background-color="#F4D03F"]
+== Démonstration
+Les opérateurs de comparaison
+
+ifeval::["{formateur}" ==  "yes"]
+[NOTE.speaker]
+.Discours formateur
+****
+Faire la démonstration en live.
+****
+endif::[]
+
+== Les opérateurs logiques
+
+* Comme en PHP
+
+== Syntaxe
+
+[.text-xs]
+[cols="1,1,1"]
+|===
+|Opérateur |Utilisation |Description
+
+|ET logique (&&)
+|condition1 && condition2
+|Renvoie true si les deux conditions sont égales à true.
+
+|OU logique (\|\|)
+|condition1 \|\| condition2
+|Renvoie true si au moins une des deux conditions est égale à true.
+
+|NON Logique
+|!condition
+|inverse la valeur de la condition
+|===
+
+== Les conditionnelles
+
+Instructions permettant de tester si une condition est vraie ou fausse.
+
+== Syntaxe
+
+[source,javascript]
+----
+if (condition) {
+    //liste d'instructions
+}
+else {
+    //autre série d'instructions
+}
+
+(condition) ? instruction si vrai : instruction si faux
+----
+
+[background-color="#F4D03F"]
+== Démonstration
+Les conditionnelles
+
+ifeval::["{formateur}" ==  "yes"]
+[NOTE.speaker]
+.Discours formateur
+****
+Faire la démonstration en live.
+****
+endif::[]
+
+== Les boucles
+
+Les boucles
+
+* while
+* do … while
+* for, for … in, for … of
+
+
+== Syntaxe de la boucle for
+
+[source,javascript]
+----
+for (let pas = 0; pas < 5; pas++) {
+  // Ceci sera exécuté 5 fois
+  // À chaque éxécution, la variable "pas" augmentera de 1
+  // Lorsque'elle sera arrivée à 5, le boucle se terminera.
+  console.log('Faire ' + pas + ' pas vers l\'est');
+}
+----
+
+== Syntaxe de la boucle do while
+
+Le bloc de code est exécuté au moins une fois.
+
+[source,javascript]
+----
+let i = 0;
+do {
+  i += 1;
+  console.log(i);
+} while (i < 5);
+----
+
+== Syntaxe de la boucle while
+
+Le bloc de code est exécuté tant que la condition est vraie.
+
+[source,javascript]
+----
+let n = 0;
+let x = 0;
+while (n < 3) {
+  n++;
+  x += n;
+}
+----
+
+[background-color="#F4D03F"]
+== Démonstration
+Les boucles
+
+ifeval::["{formateur}" ==  "yes"]
+[NOTE.speaker]
+.Discours formateur
+****
+Faire la démonstration en live.
+****
+endif::[]
+
+== Les fonctions
+
+Même fonctionnement qu'en PHP.
+
+== Syntaxe
+
+[source,javascript]
+----
+function additionner(valeur1, valeur2) {
+  let resultat = valeur1 + valeur2
+  return resultat
+}
+----
+
+[background-color="#F4D03F"]
+== Démonstration
+Les fonctions
+
+ifeval::["{formateur}" ==  "yes"]
+[NOTE.speaker]
+.Discours formateur
+****
+Faire la démonstration en live.
+****
+endif::[]
+
+== Les principaux objets disponibles
+
+
+[.text-xs9]
+* String
+** charAt(), concat(), indexOf(), substring()…
+* Number
+** MAX_VALUE, MIN_VALUE, isInteger(), isNaN()…
+* Math
+** random(), floor(), ceil()…
+* Date
+** getDate(), getMonth()+1, getYear(), getHours()… setMinutes(), setSeconds()… toLocaleDateString()…
+* Error
+** name, message
+* Propriétés et variables globales
+** Infinity, NaN, undefined, isNaN(), Number(), parseFloat(), parseInt()…
+
+ifeval::["{formateur}" ==  "yes"]
+[NOTE.speaker]
+.Discours formateur
+****
+Ces objets et méthodes devront être connu, en praticant vous y arriverez.
+****
+endif::[]
+
+[background-color="#F4D03F"]
+== Démonstration
+Les principaux objets disponibles
+
+ifeval::["{formateur}" ==  "yes"]
+[NOTE.speaker]
+.Discours formateur
+****
+Faire la démonstration en live.
+****
+endif::[]
+
+== Conclusion
+* Vous avez les connaissances pour écrire vos premiers programmes en JS.
+
+
+[background-color="#2ECC71"]
+== Objectif / Niveau
+* *Essentiel* : Savoir utiliser les variables, les conditionnelles et les boucles.
+* *Attendu* : Savoir utiliser les variables, les tableaux, les conditionnelles et les boucles.
+* *Avancé* : Savoir utiliser les variables, les tableaux, les conditionnelles, les boucles et tous les principaux objets disponibles.
+
+[background-color="#5DADE2"]
+== A toi de jouer
+Analyse d'un code JavaScript

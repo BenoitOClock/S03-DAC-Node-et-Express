@@ -1,0 +1,102 @@
+= JavaScrit
+include::./../adoc_fragments/fragment_header.adoc[]
+
+Module 03 - Les événements du DOM
+
+ifeval::["{formateur}" ==  "yes"]
+[NOTE.speaker]
+.Discours formateur
+****
+Bienvenue dans ce module traitant des événements du DOM
+****
+endif::[]
+
+== Objectifs
+
+ * Comprendre les événements JavaScript
+ * Connaître les différents types d'événement JavaScript
+ * Savoir exécuter un code selon un événement particulier
+
+ifeval::["{formateur}" ==  "yes"]
+[NOTE.speaker]
+.Discours formateur
+****
+Les objectifs de ce module sont les suivants :
+
+ * Comprendre les événements JavaScript
+ * Connaître les différents types d'événement JavaScript
+ * Savoir exécuter un code selon un événement particulier
+
+****
+endif::[]
+
+
+== Un événement du DOM c'est quoi ?
+
+[.text-xs]
+[cols="1,1"]
+|===
+|Evénement |Description
+
+|load	|fin de chargement de la page web
+|click	|clic sur un élément
+|dblclick	|double clic sur un élément
+|keydown	|une touche est appuyée
+|keypress	|une touche est maintenue enfoncée
+|keyup	|une touche est relâchée
+|mouseenter	|le curseur entre au dessus d'un élément
+|===
+
+ifeval::["{formateur}" ==  "yes"]
+[NOTE.speaker]
+.Discours formateur
+****
+    Ce sont les principaux événements mais il en existe d'autres.
+****
+endif::[]
+
+[NOTE.speaker]
+--
+Les événements sont des actions ou des occurrences qui se produisent dans le système que vous programmez et dont le système vous informe afin que vous puissiez y répondre d'une manière ou d'une autre si vous le souhaitez. Par exemple, si l'utilisateur clique sur un bouton d'une page Web, vous pouvez répondre à cette action en affichant une boîte d'information. Dans cet article, nous allons discuter de quelques concepts importants concernant les événements, et regarder comment ils fonctionnent dans les navigateurs. Ce ne sera pas une étude exhaustive; mais seulement ce que vous devez savoir à ce stade.
+--
+
+== Comment s'abonner à un évènement ?
+
+* De manière *déclarative* en HTML :
+
+[source,javascript]
+----
+\<input type="button" value="Exécuter" onclick="uneFonction();">
+----
+
+
+* De manière *programatique* en JS :
+
+[source,javascript]
+----
+document.getElementById("btn").addEventListener("click",fonction)
+----
+
+[NOTE.speaker]
+--
+La manière programatique offre plus de choix.
+--
+
+
+[background-color="#F4D03F"]
+== Démonstration
+Les évènements
+
+== Conclusion
+* Vous connaissez les principaux évènements.
+* Vous savez éxécuter un programme selon un évènement.
+
+== Objectif / Niveau
+* *Essentiel* : Savoir utiliser l'événement onClick de manière déclarative.
+* *Attendu* : Savoir utiliser l'événement onClick de manière déclarative et programatique.
+* *Avancé* : Savoir utiliser tous les événements de manière programatique.
+
+[background-color="#5DADE2"]
+== A toi de jouer
+Challenge
+

@@ -1,0 +1,197 @@
+= JavaScrit
+include::./../adoc_fragments/fragment_header.adoc[]
+
+Module 02 - Le DOM
+
+ifeval::["{formateur}" ==  "yes"]
+[NOTE.speaker]
+.Discours formateur
+****
+Bienvenue dans ce module traitant de la manipulation du DOM.
+****
+endif::[]
+
+== Objectifs
+ * Savoir utiliser le JavaScript pour rendre une page web interactive.
+ * Savoir manipuler le DOM.
+
+== Lier un fichier JavaScript au HTML
+
+[source,javascript]
+----
+        ...
+
+        <script src="module2_2.js"></script>
+    </body>
+</html>
+----
+
+[background-color="#F4D03F"]
+== Démonstration
+Lier un fichier JavaScript au HTML
+
+== Le DOM c'est quoi ?
+Document Object Model
+
+image::images/dom.drawio.png[]
+
+== DOM + Javascript = API
+
+L'API offre tout se qu'il faut pour manipuler le DOM :
+
+* Des objets
+* Des propriétés
+* Des méthodes
+* Des événements
+
+== L'objet de type Window
+
+image::images/dom-window.drawio.png[]
+
+[NOTE.speaker]
+--
+L'objet de type *console* donne accès à la console de débogage du navigateur. Les spécificités de fonctionnement varient d'un navigateur à l'autre, mais il y a tout de même un ensemble de fonctionnalités qui sont fournies de base.
+
+La propriété en lecture seule Window.*history* renvoie une référence à l'objet History, qui offre la possibilité de manipuler l'historique de session du navigateur (pages visitées dans l'onglet ou le cadre dans lesquels la page courante est chargée).
+
+L'objet de type *Document* représente n'importe quelle page web chargée dans le navigateur et sert de point d'entrée pour accéder au contenu de la page qui est formé par l'arbre du DOM.
+
+*Location* représente l'emplacement de la page en cours.
+--
+
+[background-color="#F4D03F"]
+== Démonstration
+L'objet *window* et ses propriétés
+
+== L'objet de type Document
+
+L'objet *Document* représente la page web chargée dans le navigateur et sert de point d'entrée pour accéder au contenu de la page qui est formé par l'arbre du DOM.
+
+== Les propriétés de l'objet Document
+
+[source,javascript]
+----
+* document.documentElement;
+* document.head;
+* document.title;
+* document.body;
+* document.forms;
+----
+
+[background-color="#F4D03F"]
+== Démonstration
+L'objet *document* et ses propriétés
+
+== Les fonctions de l'objet Document pour lire dans le DOM
+
+[source,javascript]
+----
+* document.getElementById();
+* document.querySelector();
+* document.getElementsByTagName();
+* document.querySelectorAll();
+----
+
+[NOTE.speaker]
+--
+La méthode getElementById() de Document renvoie un objet Element représentant l'élément dont la propriété id correspond à la chaîne de caractères spécifiée. Étant donné que les ID d'élément doivent être uniques, s'ils sont spécifiés, ils constituent un moyen utile d'accéder rapidement à un élément spécifique.
+
+La méthode querySelector() renvoie le premier Elementdans le document qui correspond au sélecteur spécifié ou au groupe de sélecteurs. Si aucune correspondance n'est trouvée, nullest retourné.
+
+La méthode Element.getElementsByTagName() retourne une liste des éléments portant le nom de balise donné. La recherche porte sur le sous-arbre de l'élément spécifié, à l'exception de cet élément lui-même. La liste retournée est live, c'est à dire qu'elle se met à jour automatiquement à chaque changement de l'arbre DOM. Par conséquent, il n'est pas nécessaire d'appeller plusieurs fois Element.getElementsByTagName() avec le même élément et les mêmes arguments.
+
+La méthode querySelectorAll() de Element renvoie une NodeList statique représentant une liste des éléments du document qui correspondent au groupe de sélecteurs spécifiés.
+--
+
+[background-color="#F4D03F"]
+== Démonstration
+L'objet document et ses fonctions de lecture
+
+== Les fonctions de l'objet Document pour Ecrire dans le DOM
+
+[source,javascript]
+----
+* document.write();
+* document.createElement();
+* document.createAttribute();
+* document.createTextNode();
+----
+
+[background-color="#F4D03F"]
+== Démonstration
+L'objet document et ses fonctions d'écriture
+
+== L'objet de type Element
+
+*Element* est la classe de base la plus générique dont héritent tous les objets qui représentent des éléments d'un *Document*
+
+== Les propriétés de l'objet Element
+
+[source,javascript]
+----
+* unElement.id;
+* unElement.value;
+* unElement.attributes;
+* unElement.innerText;
+* unElement.innerHTML;
+* unElement.firstElementChild;
+* unElement.lastElementChild;
+* unElement.nextElementSibling;
+* unElement.previousElementSibling;
+* unElement.parentElement;
+----
+
+[background-color="#F4D03F"]
+== Démonstration
+L'objet *element* et ses propriétés
+
+== Les fonctions de l'objet Element en lecture
+
+[source,javascript]
+----
+* unElement.getAttribute();
+* unElement.hasAttribute();
+* unElement.hasAttributes();
+* unElement.focus();
+* unElement.getElementsByTagName();
+* unElement.querySelector();
+----
+
+[background-color="#F4D03F"]
+== Démonstration
+L'objet *element* et ses fonctions de lecture
+
+== Les fonctions de l'objet Element en écriture
+
+[source,javascript]
+----
+* unElement.insertAdjacentElement();
+* unElement.setAttribute();
+* unElement.appendChild();
+* unElement.replaceChild();
+* unElement.removeChild();
+* unElement.removeAttribute();
+----
+
+[background-color="#F4D03F"]
+== Démonstration
+L'objet *element* et ses fonctions d'écriture
+
+[background-color="#F4D03F"]
+== Démonstration
+FINALE
+
+== Conclusion
+* Vous savez ce qu'est le DOM
+* Vous savez ce qu'est un objet document
+* Vous savez ce qu'est un objet element
+* Vous savez manipuler le DOM
+
+== Objectif / Niveau
+* *Essentiel* :Comprendre le fonctionnement du DOM, la fonction getElementByID et modifier le contenu d'une balise.
+* *Attendu* : Comprendre le fonctionnement du DOM, savoir manipuler le DOM sans difficultés.
+* *Avancé* : Comprendre le fonctionnement du DOM, savoir manipuler le DOM sans difficultés et savoir générer l'entiereté du contenu de la balise body en JavaScript.
+
+[background-color="#5DADE2"]
+== A toi de jouer
+Challenge

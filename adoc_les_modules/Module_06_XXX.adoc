@@ -1,0 +1,288 @@
+= JavaScrit
+include::./../adoc_fragments/fragment_header.adoc[]
+
+Module 06 - Stockage des données
+
+ifeval::["{formateur}" ==  "yes"]
+[NOTE.speaker]
+.Discours formateur
+****
+Bienvenue dans ce module traitant du stockage des données sur un navigateur.
+****
+endif::[]
+
+== Objectifs
+
+ * Connaître les différents façon de stocker des données côté client
+ * Savoir manipuler les cookies avec Javascript
+ * Savoir manipuler le local storage
+ * Savoir manipuler le session storage
+ * Savoir bien choisir entre cookies/local ou session storage
+ * Savoir utiliser JSON
+
+== Les cookies c'est quoi ?
+
+Un cookie est un petit fichier stocké sur le navigateur de l'utilisateur et associé à un domaine web. Ce fichier est automatiquement renvoyé lors de contacts ultérieurs avec le même domaine.
+
+== Usage des cookies
+
+* Couple clé/valeur
+* 4 ko maximum
+* Stocké sur le navigateur
+* Durée de vie aléatoire
+
+[NOTE.speaker]
+****
+Les cookies ont de multiples usages : ils peuvent servir à mémoriser votre identifiant client auprès d'un site marchand, le contenu courant de votre panier d'achat, la langue d’affichage de la page web, un identifiant permettant de tracer votre navigation à des fins statistiques ou publicitaires, etc. Certains de ces usages sont strictement nécessaires aux fonctionnalités expressément demandées par l’utilisateur ou bien à l’établissement de la communication et donc exemptés de consentement. D’autres, qui ne correspondent pas à ces critères, nécessitent un consentement de l’utilisateur avant lecture ou écriture.
+****
+
+[background-color="#F4D03F"]
+== Démonstration
+Allez voir ses cookies sur son navigateur
+
+== Les cookies : Création via un serveur
+
+image::images/cookies_1.drawio.png[]
+
+== Les cookies : Création via un serveur
+
+image::images/cookies_2.drawio.png[]
+
+== Les cookies : Création via un programme JavaSCript
+
+image::images/cookies_3.drawio.png[]
+
+== Les cookies : Créer un cookie en JavaScript
+
+[source,javascript]
+----
+// document.cookie = 'cle=valeur';
+// ajoute un cookie avec la clé lang et la valeur français
+document.cookie = 'lang=français';
+----
+
+[background-color="#F4D03F"]
+== Démonstration
+Création d'un cookie en JavaScript
+
+== Les cookies : Lire un cookie en JavaScript
+
+[source,javascript]
+----
+console.log(document.cookie); // donne toute la grande String contenant tous les cookie
+
+// pour lire un cookie il faut "un peu" de logique
+const cookiesAsArray = document.cookie.split('; ');
+// on parcourt le tableau
+for (const cookie of cookiesAsArray) {
+    // si la chaîne commence par le début du cookie qui nous intéresse
+    if (cookie.startsWith('nomDuCookieRecherché')) {
+        // on découpe le contenu du cookie
+        const cookieInfo = cookie.split('=');
+        // pour récupérer que la valeur
+        const value = cookieInfo[1];
+        // la valeur est trouvée
+        console.log(value);
+    }
+}
+----
+
+[background-color="#F4D03F"]
+== Démonstration
+Lecture d'un cookie en JavaScript
+
+== Local Storage c'est quoi ?
+
+* Lié au domaine qui fait tourner notre application, on ne peut pas récupérer des infos qui auraient été mises de coté sur Facebook alors qu'on est sur Youtube
+* Plus pratique à utiliser que les cookies
+* 🚫Les informations du localStorage ne sont pas incluses dans les requêtes HTTP
+* Pas de limite de conservation des données
+
+== Local Storage : Ecrire des données
+
+[source,javascript]
+----
+// l'objet localStorage est global, il est toujours disponible :
+// - via la méthode setItem on sauvegarde une information, même si je quitte la page et que je reviens, l'information est persistante
+// - on passe 2 arguments, la clé pour retrouver la valeur plus tard, et la valeur
+localStorage.setItem('age', 31);
+----
+
+[background-color="#F4D03F"]
+== Démonstration
+LocalStorage : Ecrire des données avec JavaScript
+
+== LocalStorage : Lire les données
+
+[source,javascript]
+----
+// via la méthode getItem, on récupère la valeur, il faut passer la clé en argument
+const userAge = localStorage.getItem('age');
+console.log(userAge); // '31'
+----
+
+[background-color="#F4D03F"]
+== Démonstration
+LocalStorage : Lire des données avec JavaScript
+
+== Le localStorage ne gère que des String
+
+Si on veut stocker n'importe quel type de données (un objet, un tableau, un booléen, ...), on peut le transformer en String via :
+
+[source,javascript]
+----
+const valeurATransformer = true;
+JSON.stringify(valeurATransformer);
+----
+
+[background-color="#F4D03F"]
+== Démonstration
+Transformer des données en String
+
+== JSON c'est quoi ?
+
+Le JSON (JavaScript Object Notation) est un format de données textuelles dérivé de la notation des objets du langage JavaScript. Comme c'est du texte, on peut donc le stocker dans le localStorage 😎
+
+== SessionStorage c'est quoi ?
+
+SessionStorage fonctionne de la même manière que LocalStorage mise à part que les données du sessionStorage ont une durée de vie limité à la session de navigation. Si on ferme le navigateur, les données sont effacées.
+
+== Session Storage : La syntaxe
+
+* On pourra donc :
+    ** ajouter/modifier une information
+
+[source,javascript]
+----
+sessionStorage.setItem('key','value');
+----
+
+    ** récupérer une information
+
+[source,javascript]
+----
+sessionStorage.getItem('key');
+----
+
+** supprimer une information
+
+[source,javascript]
+----
+sessionStorage.removeItem('key');
+----
+
+** supprimer toutes les informations
+
+[source,javascript]
+----
+sessionStorage.clear();
+----
+
+[background-color="#F4D03F"]
+== Démonstration
+Utilisation de SessionStorage
+
+[background-color="#5DADE2"]
+== A toi de jouer
+Sur Trip'Odvisor, quel méthodologie utiliserais tu pour sauvegarder l'activiation du dark mode ?
+
+== Résultat de la réflexion
+
+* Résultat de la réflexion :
+   ** cookie, non, car pas besoin d'envoyer ce choix dans chaque requête HTTP (pas utile côté serveur)
+   ** sessionStorage, non, car on veut conserver la préférence de l'utilisateur même s'il ferme son navigateur
+   ** on part donc sur le localStorage 👌
+
+[background-color="#F4D03F"]
+== Démonstration
+Sur Trip'Odvisor
+
+Code
+JSON, localStorage, objets, méthodes, DOM lecture/écriture, évènements, classList, conditions
+
+On ajoute la méthode saveToLocalStorage qui sauvegarde l'état du thème dans le localStorage
+On appelle cette méthode après avoir changé le thème dans toggleDark
+On crée la méthode initLocalState qui vérifie le thème sauvegardé et on l'appelle au chargement de la page dans init
+ℹ️ Montrer le contenu du localStorage via les Devtools/Application/Storage/LocalStorage.
+
+⚠️ Comme on utilise le domaine localhost, il y aura d'autres valeurs présentes dans le localStorage et pas seulement celles de notre site. Préciser qu'en production, on aurait notre propre nom de de domaine et qu'on ne rencontrerait pas ce problème.
+
+//const theme = {
+//
+//    init: function() {*/
+//
+//        // On sélectionne le bouton de changement de thème
+//        const themeSwitchElement = document.querySelector('#theme-switch');
+//
+//        // On place un écouteur d'événement sur le bouton
+//        themeSwitchElement.addEventListener('click', theme.toggleDark);
+//
+//        // Au chargement de la page, on vérifie si le localStorage contient une valeur pour le theme sombre/clair
+//        theme.initLocalState();
+//
+//    },
+//
+//    toggleDark() {
+//
+//        // On commence par sélectionner la balise sur laquelle
+//        // on va modifier la classe "theme-dark"
+//        const body = document.querySelector('body');
+//
+//        body.classList.toggle('theme-dark');
+//
+//        // On sauvegarde le thème dans le localStorage
+//        theme.saveToLocalStorage();
+//
+//    },
+//
+//    saveToLocalStorage: function() {
+//
+//        // On vérifie si le body contient le theme dark
+//        // contains renvoie true si la classe est présente, false sinon.
+//        const isDark = document.body.classList.contains('theme-dark');
+//
+//        // On transforme la valeur booléenne en chaîne de caractères
+//        const newLocalSave = JSON.stringify(isDark);
+//
+//        // On sauvegarde le theme dans le localStorage
+//        localStorage.setItem('darkMode', newLocalSave);
+//
+//    },
+//
+//    initLocalState: function() {
+//
+//        // On récupère la valeur du thème dans le localStorage
+//        const localSave = localStorage.getItem('darkMode');
+//
+//        // On transforme la chaîne de caractères en booléen
+//        const isDark = JSON.parse(localSave);
+//
+//        // Si "isDark" contient true, c'est que le thème est en mode dark
+//        if (isDark) {
+//            // On applique le thème dark
+//            document.body.classList.add('theme-dark');
+//        }
+//
+//    }
+//};
+//
+//document.addEventListener('DOMContentLoaded', theme.init);*/
+
+== Conclusion
+* Vous connaissez les différentes méthodologies de sauvegarde de données sur un navigateur
+* Vous savez créer et lire des cookies en JavaScript
+* Vous savez créer et lire dans le LocalStorage de votre navigateur en JavaScript
+* Vous savez créer et lire dans le SessionStorage de votre navigateur en JavaScript
+
+== Objectif / Niveau
+* *Essentiel* : Comprendre le fonctionnement de tous les mécanismes de persistance côté client.
+* *Attendu* : Savoir utiliser tous les mécanismes de persistance côté client.
+* *Avancé* : Savoir choisir le meilleur mécanisme de persistance selon une situation et savoir utiliser tous les mécanismes de persistance côté client.
+
+
+[background-color="#5DADE2"]
+== A toi de jouer
+Challenge
+
+
+

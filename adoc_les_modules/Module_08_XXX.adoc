@@ -1,0 +1,46 @@
+= JavaScript
+include::./../adoc_fragments/fragment_header.adoc[]
+
+
+Module 08 - Présentation du parcours
+
+== Le Parcours :fire: JavaScript
+
+Démarrage dans le fichier `exos/index.php`.  
+Seuls les fichiers `js/exo*.js` sont à modifier (et `js/bonus.js` si tu fais le bonus).
+
+== Au programme
+
+7 exercices (et 1 bonus) pour s'entraîner, se muscler, transpirer et progresser :tada:
+
+* variables
+* fonctions
+* boucles
+* conditions
+* événements
+* DOM
+* ...
+
+Bon courage :muscle:
+
+== Instructions
+
+Dans le fichier `exos/index.php`, les liens vers les exos ainsi qu'une liste de ressources et notions associées à chaque exo
+
+== Pour faciliter votre parcours
+
+Nous vous demandons de commenter votre code car cela vous permet
+
+* au démarrage, de commencer plus facilement en réfléchissant à ce que vous devez faire avant de penser directement au code proprement dit
+* de s'assurer que vous avez bien compris le code que vous saisissez
+
+== Conseils méthodologiques
+
+* Je commence par écrire en commentaires les différentes petites étapes pour coder la fonctionnalité demandée
+* Je code une seule étape à la fois (on avance pas à pas)
+* A chaque étape, je teste et je vérifie mon code (log/dump), avant de passer à l'étape suivante
+* Je peux également rajouter des commentaires plus précis pour expliciter mon code si besoin
+
+[background-color="#5DADE2"]
+== A toi de jouer
+Challenge

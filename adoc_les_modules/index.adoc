@@ -1,0 +1,150 @@
+:module1: Module_01_XXX
+:module2: Module_02_XXX
+:module3: Module_03_XXX
+:module4: Module_04_XXX
+:module5: Module_05_XXX
+:module6: Module_06_XXX
+:module7: Module_07_XXX
+:module8: Module_08_XXX
+:icons: font
+
+= Socle XXX - Saison XXX - XXX
+
+Ce document contient le déroulé du cours ainsi que les ressources nécessaires aux formateurs pour donner cours dans les meilleures conditions.
+
+:toc:
+
+:titre: Episode 1 XXX
+include::./../adoc_fragments/fragment_debut_episode.adoc[]
+
+* *Module 01 - Les fondamentaux*  : Durant le cours les démonstrations suivantes seront à faire :
+    ** link:https://github.com/O-clock-Socle-PHP/S03-DAC-LeJavaScript/tree/main/contenu_des_demonstrations/Module01/Demonstration01[Démonstration 01] : Utilisation des variables
+    ** link:https://github.com/O-clock-Socle-PHP/S03-DAC-LeJavaScript/tree/main/contenu_des_demonstrations/Module01/Demonstration02[Démonstration 02] : Utilisation des tableaux
+    ** link:https://github.com/O-clock-Socle-PHP/S03-DAC-LeJavaScript/tree/main/contenu_des_demonstrations/Module01/Demonstration03[Démonstration 03] : Utilisation des opérateurs de base
+    ** link:https://github.com/O-clock-Socle-PHP/S03-DAC-LeJavaScript/tree/main/contenu_des_demonstrations/Module01/Demonstration04[Démonstration 04] : Utilisation des conditionnelles
+    ** link:https://github.com/O-clock-Socle-PHP/S03-DAC-LeJavaScript/tree/main/contenu_des_demonstrations/Module01/Demonstration05[Démonstration 05] : Utilisation des boucles
+    ** link:https://github.com/O-clock-Socle-PHP/S03-DAC-LeJavaScript/tree/main/contenu_des_demonstrations/Module01/Demonstration06[Démonstration 06] : Utilisation des fonctions
+    ** link:https://github.com/O-clock-Socle-PHP/S03-DAC-LeJavaScript/tree/main/contenu_des_demonstrations/Module01/Demonstration07[Démonstration 07] : Utilisation des principaux objets disponibles
+* Lancer le link:https://github.com/O-clock-Socle-PHP/S03-E01-decouverte-js[Challenge] via link:https://kourou.oclock.io/login/[Kourou]
+
+
+:module: {module1}
+include::./../adoc_fragments/fragment_presentation_supports_module.adoc[]
+
+
+:titre:  Episode 2 XXX
+include::./../adoc_fragments/fragment_debut_episode.adoc[]
+
+* Correction du challenge
+    ** link:https://github.com/O-clock-Socle-PHP/S03-E01-decouverte-js/wiki/Exercice-1[Correction] de l'exercice 1
+    ** https://github.com/O-clock-Socle-PHP/S03-E01-decouverte-js/wiki/Exercice-2[Correction] de l'exercice 2 (Corrigez le bonus)
+
+* *Module 02 - Le DOM* : Durant le cours les démonstrations suivantes seront à faire :
+    ** link:https://github.com/O-clock-Socle-PHP/S03-DAC-LeJavaScript/tree/main/contenu_des_demonstrations/Module02/Demonstration01[Démonstration 01] : Lier un fichier JavaScript au HTML
+    ** link:https://github.com/O-clock-Socle-PHP/S03-DAC-LeJavaScript/tree/main/contenu_des_demonstrations/Module02/Demonstration02[Démonstration 02] : Utilisation d'un objet de type Window
+    ** link:https://github.com/O-clock-Socle-PHP/S03-DAC-LeJavaScript/tree/main/contenu_des_demonstrations/Module02/Demonstration03[Démonstration 03] : Utilisation d'un objet de type Document
+    ** link:https://github.com/O-clock-Socle-PHP/S03-DAC-LeJavaScript/tree/main/contenu_des_demonstrations/Module02/Demonstration04[Démonstration 04] : Utilisation d'un objet de type Document pour lire dans le DOM
+    ** link:https://github.com/O-clock-Socle-PHP/S03-DAC-LeJavaScript/tree/main/contenu_des_demonstrations/Module02/Demonstration05[Démonstration 05] : Utilisation d'un objet de type Document pour écrire dans le DOM
+    ** link:https://github.com/O-clock-Socle-PHP/S03-DAC-LeJavaScript/tree/main/contenu_des_demonstrations/Module02/Demonstration06[Démonstration 06] : Utilisation d'un objet de type Element
+    ** link:https://github.com/O-clock-Socle-PHP/S03-DAC-LeJavaScript/tree/main/contenu_des_demonstrations/Module02/Demonstration07[Démonstration 07] : Utilisation d'un objet de type Element pour lire dans le DOM
+    ** link:https://github.com/O-clock-Socle-PHP/S03-DAC-LeJavaScript/tree/main/contenu_des_demonstrations/Module02/Demonstration08[Démonstration 08] : Utilisation d'un objet de type Element pour écrire dans le DOM
+    ** link:https://github.com/O-clock-Socle-PHP/S03-DAC-LeJavaScript/tree/main/contenu_des_demonstrations/Module02/Demonstration09[Démonstration 09] : Démonstration finale reprenant tous les concepts
+* link:https://github.com/O-clock-Socle-PHP/S03-tripodvisor[Démonstration] à faire sur Trip'Odvisor.
+* Lancer le link:https://github.com/O-clock-Socle-PHP/S03-E02-challenge-quiz-DOM[Challenge] via link:https://kourou.oclock.io/login/[Kourou]
+
+:module: {module2}
+include::./../adoc_fragments/fragment_presentation_supports_module.adoc[]
+
+
+:titre: Episode 3 XXX
+include::./../adoc_fragments/fragment_debut_episode.adoc[]
+
+* link:https://github.com/O-clock-Socle-PHP/S03-E02-challenge-quiz-DOM/wiki[Correction] du challenge
+* *Module 03 - Les événements* : Durant le cours les démonstrations suivantes seront à faire :
+    ** link:https://github.com/O-clock-Socle-PHP/S03-DAC-LeJavaScript/tree/main/contenu_des_demonstrations/Module03/Demonstration01[Démonstration 01] : Comment s'abonner à un évènement
+* link:https://github.com/O-clock-Socle-PHP/S03-E03-exo-Clic[Démontration] : Compteur de clic
+* Lancer le Challenge via link:https://kourou.oclock.io/login/[Kourou]
+
+:module: {module3}
+include::./../adoc_fragments/fragment_presentation_supports_module.adoc[]
+
+
+:titre: Episode 4 XXX
+include::./../adoc_fragments/fragment_debut_episode.adoc[]
+
+* Présentation de l'link:https://github.com/O-clock-Socle-PHP/S03-atelier[Atelier] 
+    * Accompagnement des apprenants durant l'atelier
+* Envoyer le récapitulatif link:https://kourou.oclock.io/login/[Kourou].
+
+:module: {module4}
+include::./../adoc_fragments/fragment_presentation_supports_module.adoc[]
+
+
+:titre: Episode 5 XXX
+include::./../adoc_fragments/fragment_debut_episode.adoc[]
+
+* Correction de l'Atelier
+* *Module 05 - Les modules JavasScript* : Durant le cours les démonstrations suivantes seront à faire :
+    ** link:https://github.com/O-clock-Socle-PHP/S03-DAC-LeJavaScript/tree/main/contenu_des_demonstrations/Module05/Demonstration01[Démonstration 01]  : Création d'un module
+    ** link:https://github.com/O-clock-Socle-PHP/S03-DAC-LeJavaScript/tree/main/contenu_des_demonstrations/Module05/Demonstration02[Démonstration 02] : Création d'un second module
+    ** link:https://github.com/O-clock-Socle-PHP/S03-DAC-LeJavaScript/tree/main/contenu_des_demonstrations/Module05/Demonstration03[Démonstration 03]  : Création d'un troisième module
+* Lancer le link:https://github.com/O-clock-Socle-PHP/S03-E05-challenge-theme-module[Challenge] via link:https://kourou.oclock.io/login/[Kourou]
+
+
+:module: {module4}
+include::./../adoc_fragments/fragment_presentation_supports_module.adoc[]
+
+
+:titre: Episode 6 XXX
+include::./../adoc_fragments/fragment_debut_episode.adoc[]
+
+* Correction du challenge
+* *Module 06 - Stockage des données* : Durant le cours les démonstrations suivantes seront à faire :
+    ** link:https://github.com/O-clock-Socle-PHP/S03-DAC-LeJavaScript/tree/main/contenu_des_demonstrations/Module06/Demonstration01[Démonstration 01] : Allez voir ses cookies sur son navigateur
+    ** link:https://github.com/O-clock-Socle-PHP/S03-DAC-LeJavaScript/tree/main/contenu_des_demonstrations/Module06/Demonstration02[Démonstration 02] : Création d'un cookie en JavaScript
+    ** link:https://github.com/O-clock-Socle-PHP/S03-DAC-LeJavaScript/tree/main/contenu_des_demonstrations/Module06/Demonstration03[Démonstration 03] : Lecture d'un cookie en JavaScript
+    ** link:https://github.com/O-clock-Socle-PHP/S03-DAC-LeJavaScript/tree/main/contenu_des_demonstrations/Module06/Demonstration04[Démonstration 04] : LocalStorage : Ecrire des données avec JavaScript
+    ** link:https://github.com/O-clock-Socle-PHP/S03-DAC-LeJavaScript/tree/main/contenu_des_demonstrations/Module06/Demonstration05[Démonstration 05] : LocalStorage : Lire des données avec JavaScript
+    ** link:https://github.com/O-clock-Socle-PHP/S03-DAC-LeJavaScript/tree/main/contenu_des_demonstrations/Module06/Demonstration06[Démonstration 06] : Transformer des données en String
+    ** link:https://github.com/O-clock-Socle-PHP/S03-DAC-LeJavaScript/tree/main/contenu_des_demonstrations/Module06/Demonstration07[Démonstration 07] : Utilisation de SessionStorage
+    ** link:https://github.com/O-clock-Socle-PHP/S03-DAC-LeJavaScript/tree/main/contenu_des_demonstrations/Module06/Demonstration08[Démonstration 08] : Utilisation de mécanisme de persistance sur Trip'Odvisor
+* Lancer le link:https://github.com/O-clock-Socle-PHP/S03-E06-challenge-theme-color[Challenge] via link:https://kourou.oclock.io/login/[Kourou]
+
+
+:module: {module4}
+include::./../adoc_fragments/fragment_presentation_supports_module.adoc[]
+
+
+:titre: Episode 7 XXX
+include::./../adoc_fragments/fragment_debut_episode.adoc[]
+
+* Correction du challenge
+* *Module 07 - Dataset* : Durant le cours les démonstrations suivantes seront à faire :
+    ** link:https://github.com/O-clock-Socle-PHP/S03-DAC-LeJavaScript/tree/main/contenu_des_demonstrations/Module07/Demonstration01[Démonstration 01] : Syntaxe HTML
+    ** link:https://github.com/O-clock-Socle-PHP/S03-DAC-LeJavaScript/tree/main/contenu_des_demonstrations/Module07/Demonstration02[Démonstration 02] : Ecrire un dataSet en JS.
+    ** link:https://github.com/O-clock-Socle-PHP/S03-DAC-LeJavaScript/tree/main/contenu_des_demonstrations/Module07/Demonstration03[Démonstration 03] : Lire un dataSet en JS.
+    ** link:https://github.com/O-clock-Socle-PHP/S03-DAC-LeJavaScript/tree/main/contenu_des_demonstrations/Module07/Demonstration04[Démonstration 04] : Utiliser les dataSet sur Trip'Odvisor
+* Envoyer le  *Récapitulatif* via link:https://kourou.oclock.io/login/[Kourou]
+
+
+:module: {module7}
+include::./../adoc_fragments/fragment_presentation_supports_module.adoc[]
+
+
+:titre: Episode 8 XXX
+include::./../adoc_fragments/fragment_debut_episode.adoc[]
+
+* Présentation du link:https://github.com/O-clock-Socle-PHP/S03-parcours/[parcours].
+* Post-mortem à effectuer.
+
+IMPORTANT: Le Post-Mortem doit être fait pour améliorer les cours, pensez aussi aux Pull Request.
+
+
+:module: {module8}
+include::./../adoc_fragments/fragment_presentation_supports_module.adoc[]
+
+== Doc as code
+
+link:DocAsCode.html[Présentation]
+
+

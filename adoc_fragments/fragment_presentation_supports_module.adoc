@@ -1,0 +1,12 @@
+[cols="1,1"]
+|===
+|Ressource |Description
+
+|link:{module}.html[Slides] | Slides à utiliser pendant le cours
+|link:apprenant/html/{module}.html[Récapitulatif apprenant HTML] | Récapitulatif de cours au format HTML pour les apprenants
+|link:apprenant/pdf/{module}.pdf[Récapitulatif apprenant PDF] | Récapitulatif de cours au format PDF pour les apprenants
+|link:formateur/html/{module}.html[Récapitulatif formateur HTML] | Récapitulatif de cours au format HTML pour les *formateurs*
+|link:formateur/pdf/{module}.pdf[Récapitulatif formateur PDF] | Récapitulatif de cours au format PDF pour les *formateurs*
+|===
+
+NOTE: Les supports formateurs contiennent des aides au discours à tenir. Ces supports ne doivent pas être donnés aux apprenants.

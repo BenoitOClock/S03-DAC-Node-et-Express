@@ -1,0 +1,22 @@
+= JavaScrit
+include::./../adoc_fragments/fragment_header.adoc[]
+
+Atelier S03 
+
+== Présentation
+
+Trip O'dvisor : https://github.com/O-clock-Socle-PHP/S03-atelier
+
+== Organisation des équipes
+
+* Définies par le tuteur.
+* Travail en Pair-programming.
+
+== Objectif / Niveau
+* Essentiel : Réussir à comprendre la consigne.
+* Attendu : Finir le challenge.
+* Avancé : Finir le challenge et ses bonus.
+
+[background-color="#5DADE2"]
+== A toi de jouer
+Challenge

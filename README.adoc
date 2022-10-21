@@ -1,0 +1,13 @@
+= Socle XXX - Saison XX - XXX
+
+Pour accèder au déroulé, aux slides, aux démonstrations et aux récapitulatifs :
+
+1. Téléchargez la branche *gh-pages*
+2. Dézippez là
+3. Double cliquez sur index.html et c'est tout.
+
+NOTE: Pensez à Pull Request !
+
+
+
+
