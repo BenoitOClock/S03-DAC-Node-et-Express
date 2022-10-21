@@ -1,2 +1,2 @@
 == {titre}
-WARNING: Pensez à enregistrer le cours avec OBS..
+WARNING: Pensez à enregistrer le cours avec OBS...

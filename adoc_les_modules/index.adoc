@@ -1,4 +1,4 @@
-:module1: Module_01_XXX
+:module1: Module_01_DécouverteNode
 :module2: Module_02_XXX
 :module3: Module_03_XXX
 :module4: Module_04_XXX

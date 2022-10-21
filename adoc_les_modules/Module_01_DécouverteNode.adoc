@@ -32,7 +32,7 @@ Le PHP est interprété sur le serveur web, les navigateurs sont incapables d'in
 
 == PlantUML C'est quoi ?
 
-[plantuml, target=diagram-classes, format=txt]   
+[plantuml, target=diagram-classes, format=png]   
 ....
 class BlockProcessor
 class DiagramBlock
